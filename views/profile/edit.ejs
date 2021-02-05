@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/header') %>
+
+<body>
+    <%- include('../partials/navbar') %>
+    <div class="container" style="width: 600px;">
+
+        <h4><i class="fas fa-user-plus"></i> Edit Your Profile</h4>
+        <hr style="opacity: 40%;">
+
+        <form class="form" action="/profile" method="POST" enctype="multipart/form-data">
+
+
+            <div class="form-group">
+
+                <input type="text" placeholder=" *Name" name="Name" value="<%=profile.Name%>" />
+                <small class="form-text">Profile Handler Name</small>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder=" *Headline" name="Headline" value="<%=profile.Headline%>" />
+                <small class="form-text">(e.g: Student,Developer)</small>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder=" Website" name="Website" value="<%=profile.Website%>" />
+
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder=" *Country" name="Country" value="<%=profile.Country%>" />
+                <small class="form-text">(eg: India)</small>
+            </div>
+            <div class="form-group">
+
+                <input type="file" id="Image" name="Image" value="<%=profile.Image%>" style="height: 40px;padding: 4px;">
+                <small class="form-text">Upload a profile image</small>
+
+
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder=" *Skills" name="skills" value="<%=profile.skills%>" />
+                <small class="form-text"> (eg. HTML,CSS)</small>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder=" Add your Linked In URL" name="linkedin"
+                    value="<%=profile.linkedin%>" />
+            </div>
+            <h6><i class="fa fa-link"></i> Link Your Social Websites</h6>
+            <hr style="opacity: 40%;">
+            <div class="form-group">
+
+                <input type="text" placeholder=" GitHub URL" name="githubusername" value="<%=profile.githubusername%>">
+                <p class="form-text" style="size: 55px;">
+                    <i class="fab fa-github"></i> Github Link
+                </p>
+
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder=" Facebook URL" name="facebook" value="<%=profile.facebook%>">
+                <p class="form-text" style="size: 55px;">
+                    <i class="fab fa-facebook"></i> Facebook Link
+                </p>
+
+            </div>
+            <div class="form-group">
+                <button class="btn waves-effect waves-light " style="background-color: #0288d1; width:20% ;height:40%;"
+                    type="submit">
+                    Save</button>
+            </div>
+
+
+
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>

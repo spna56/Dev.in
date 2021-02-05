@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/header') %>
+
+<body>
+    <%- include('../partials/navbar') %>
+    <div class="container" style="width: 600px;">
+
+        <h5 style="font-weight: bold;"> Add Your Employment details</h5>
+        <hr style="opacity: 40%;">
+
+        <form class="form" action="/profile/experience/<%=profile._id%>" method="POST" >
+
+
+
+            <div class="form-group">
+                <input type="text" placeholder=" *Company" name="Company" />
+               
+
+            <div class="form-group">
+                <input type="text" placeholder=" *Role" name="Role" />
+                <small class="form-text">(ex: Software Engineer)</small>
+            </div>
+            <div class="form-group">
+
+                <input type="text" placeholder=" *Location" name="Location" />
+
+            </div>
+            <div class="form-group">
+                <label>
+
+                    <input type="checkbox" class="filled-in" name="Current" id="box" />
+
+                    <span style="font-weight: 500;"> Currently working here</span>
+
+                </label>
+            </div>
+
+            <div class="form-group">
+
+                <input type="date" placeholder=" *Start Date" name="Start Date" />
+                <small class="form-text">(*Starting From)</small>
+
+
+
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="date" placeholder=" *End Date" name="End Date" id="text" />
+                <small class="form-text">(*Ending in)</small>
+
+            </div>
+
+            <div class="form-group">
+                <small class="form-text">Description</small>
+                <textarea type="text" placeholder="Description" name="Description" style="height: 80px;">
+
+           </textarea>
+            </div>
+
+
+            <div class="form-group">
+                <button class="btn waves-effect waves-light " style="background-color: #43a047; width:20% ;height:40%;"
+                    type="submit">
+                    Save</button>
+            </div>
+
+
+
+
+
+
+
+
+        </form>
+    </div>
+    <script>
+        document.getElementById('box').onchange = function () {
+            document.getElementById('text').disabled = this.checked
+        }
+    </script>
+
+</body>
+
+</html>

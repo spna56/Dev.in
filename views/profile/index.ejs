@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/header') %>
+  <body >
+    <%- include('../partials/navbar') %>
+    <section class="container">
+      <h3 class="large text-primary">Developers</h3>
+      <h5 class="lead">
+        <i class="far fa-gem"></i></i>  Connect with Developers around you
+      </h5>
+      <%profile.forEach(function(profile){%>
+      <div class="profiles">
+        <div class="profile bg-light">
+   
+          <%if(!profile.Image){%>
+            <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTwiHF4OW3y3l3Zyi8f7CFCbuB5GU1c4KTjGQ&usqp=CAU"
+            alt="" class="circle responsive-img"
+            >
+          <%} else{%>
+          
+          <img
+            src="<%=profile.Image%>"
+            alt="" class="circle responsive-img"
+            >
+            <%}%>
+      
+          <div>
+           
+            <h2><%=profile.Name%></h2>
+            <p style="font-weight: 500;opacity: 70%;"><%=profile.Headline%> </p>
+            <p style="font-weight: 500;opacity: 70%;"><%=profile.Country%> </p>
+            <a href="#" class="btn waves-effect waves-light " style="background-color: #0288d1;">View Profile</a>
+          </div>
+           
+          <div>
+            <ul >
+              <%var formattedstring=profile.skills.split(",").join('\n<i class="fa fa-check" ></i>  ')%>
+              <li style="white-space: pre-wrap;"><i class="fa fa-check" ></i> <%- formattedstring %>
+              </li>
+            </ul>
+        
+          </div>
+         
+         
+
+     
+      </div>
+      <%})%>
+    </section>
+    
+   
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<div class="navbar-fixed">
+    <nav  style="background: linear-gradient(-90deg,#02203c,#001528);">
+        <div class="nav-wrapper">
+            <div class="container">
+                <ul id="nav-mobile" class="left ">
+                 <li > <a href="/"  style="font-size: 35px;"><i style="font-size: 38px;" class="fa fa-codepen "></i> Dev.in</a></li>
+                 <li><a href="/index">Developers</a></li>
+                </ul>
+               
+                
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li ><a href="/posts" >Posts</a></li>
+                   
+                    <%if(user){%>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/posts/new">Add Post</a></li>
+
+                    <%}%>
+        <% if(!user) {%>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">SignUp</a></li>
+                    <%}%>
+        <%if(user){%>
+                   
+                    <li><a  href="/logout">Logout</a></li>
+                  
+                    
+                    <%}%> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

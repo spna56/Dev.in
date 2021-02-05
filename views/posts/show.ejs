@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/header') %>
+
+<body>
+    <%- include('../partials/navbar') %>
+    <div class="container">
+        <form action="/posts">
+            <button class="btn waves-effect waves-light " style="background-color: #9e9e9e; margin-top: 10px;"
+                type="submit">
+                Back To Posts</button>
+        </form>
+        <h3>Share Your Views</h3>
+
+
+        <form class="col s12 m8 offset-m2 l6 offset-l3" action="/post/comment/<%=post._id%>" method="POST">
+            <div class="card-panel grey lighten-5 z-depth-1">
+                <div class="row valign-wrapper">
+
+                    <div class="col s12">
+                        <span class="black-text">
+                            <input placeholder="Add a Comment...." id="commentbody" type="text" name="commentbody">
+                            <button class="btn waves-effect waves-light"
+                                style="background-color: #0288d1;">Post</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <%post.comments.forEach(function(comments){ %>
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+                <span class="pull-right" style="padding-top: 0px; float:right;">
+
+                    <form action="/post/<%=post._id%>/comment/<%=comments._id%>?_method=DELETE" method="POST">
+                        <%if(user&&comments.commentuser.equals(user._id)){%>
+                        <button class="btn waves-effect waves-light" style="background-color:#d32f2f">&times;</button>
+                        <%}%>
+                    </form></span>
+                <div class="row valign-wrapper">
+
+                    <div class="col s12">
+                        <span>
+                            <strong style="color:black; font-weight: bold;">
+                                <i><%=comments.commentuser.username%></i></strong> commented:
+
+                </span><br>
+
+                <%=comments.commentbody%>
+                <br>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <%  })%>
+
+
+    </div>
+
+
+</body>
+
+</html>

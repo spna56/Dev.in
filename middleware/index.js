@@ -1,0 +1,10 @@
+module.exports={
+    isloggedin:function(req,res,next){
+        if(req.isAuthenticated()){
+            next()
+        }
+        else{
+            res.redirect('/')
+        }
+    }
+}

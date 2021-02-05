@@ -1,0 +1,125 @@
+.form .form-group {
+    margin: 1.1rem 0;
+  }
+  
+  .form .form-text {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 1.0rem;
+    color: #888;
+    font-weight: 500;
+  }
+  
+  .form input[type='text'],
+  .form input[type='date'],
+  .form input[type="file"],
+  .form textarea,
+  
+  .form select
+   {
+  
+    display: block;
+    width: 100%;
+    padding: 0.0rem;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,.1), 0 0 0 transparent;
+    background-color:#fafafa;
+    border-radius: 0;
+    color: #0e141e;
+  }
+
+  input::placeholder {
+   
+    
+    font:  15.3333px Arial;
+
+  }
+  
+.index{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,.1), 0 0 0 transparent;
+    background-color:#fafafa;
+    border-radius: 0;
+    border: 1px solid #000;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  align-items: center;
+  grid-gap: 2rem;
+  padding: 1rem;
+  line-height: 1.2 ;
+  border: 1px solid #000;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.1), 0 0 0 transparent;
+  background-color:#fafafa;
+  border-radius: 4px;
+  
+}
+.text-primary {
+  color: #000;
+}
+
+.card{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color:#fafafa;
+  border-radius: 0;
+  border: 1px solid rgba(252, 244, 244, 0.5);
+ 
+}
+
+
+
+ul  li  a i{
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+ 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  
+}
+ul  li  a {
+  background: linear-gradient(to right, #ffefba, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-family:Arial, Helvetica, sans-serif;
+  
+}
+
+.name{
+  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-top: 10px;
+  height: 30px;
+}
+.name i {
+  float: left;font-size: 20px;
+  color: #000;
+
+}
+
+
+
+.post{
+  background-color: #f4f4f4;
+  width: 300px;
+  margin: 10px auto;
+
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.circle {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+
